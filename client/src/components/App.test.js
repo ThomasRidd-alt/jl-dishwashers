@@ -7,6 +7,7 @@ import ProductGridPage from "../pages/ProductGridPage";
 import NotFoundPage from "../pages/NotFoundPage";
 
 jest.mock("../services/getProducts")
+jest.mock("../services/getProductWithId")
 
 describe('App', () => {
     const app = shallow(<App/>);
