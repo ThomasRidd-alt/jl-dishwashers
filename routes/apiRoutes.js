@@ -9,7 +9,11 @@ module.exports = (app) => {
         fetch(PRODUCT_GRID_URL)
             .then(response => response.json())
             .then(
-                result => res.send(result)
+                result => {
+                    res.setHeader('Access-Control-Allow-Origin', '*');
+                    res.setHeader('Content-Type', 'application/json');
+                    res.send(JSON.stringify(result))
+                }
             )
             .catch(e => {
                 console.log(e);
@@ -21,8 +25,11 @@ module.exports = (app) => {
         fetch(`${PRODUCT_ITEM_URL}/${req.params.id}`)
             .then(response => response.json())
             .then(
-                result => res.send(result)
-            )
+                result => {
+                    res.setHeader('Access-Control-Allow-Origin', '*');
+                    res.setHeader('Content-Type', 'application/json');
+                    res.send(JSON.stringify(result))
+                })
             .catch(e => {
                 console.log(e);
                 res.send(e)

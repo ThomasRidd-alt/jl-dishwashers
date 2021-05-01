@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-const PRODUCT_GRID_API_URL = 'https://api.johnlewis.com/search/api/rest/v2/catalog/products/search/keyword?q=dishwasher&key=AIzaSyDD_6O5gUgC4tRW5f9kxC0_76XRC8W7_mI'
+const PRODUCT_GRID_API_URL = 'http://localhost:3000/api/product-grid'
 
 class ProductGridPage extends Component {
     constructor(props) {
@@ -13,7 +13,6 @@ class ProductGridPage extends Component {
 
 
     fetchProducts = () => {
-        console.log('fetching')
         this.setState({...this.state, isFetching: true});
 
         fetch(PRODUCT_GRID_API_URL)
