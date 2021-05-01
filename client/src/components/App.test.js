@@ -6,6 +6,8 @@ import ProductPage from "../pages/ProductPage";
 import ProductGridPage from "../pages/ProductGridPage";
 import NotFoundPage from "../pages/NotFoundPage";
 
+jest.mock("../services/getProducts")
+
 describe('App', () => {
     const app = shallow(<App/>);
 

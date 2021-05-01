@@ -1,42 +1,44 @@
 import React, {Component} from "react";
-
-const PRODUCT_GRID_API_URL = 'http://localhost:3000/api/product-grid'
+import {getProducts} from "../services/getProducts";
+import ProductGridFetching from "../components/ProductGridFetching";
+import ProductGridError from "../components/ProductGridError";
+import ProductGrid from "../components/ProductGrid";
 
 class ProductGridPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isFetching: false,
+            isFetching: true,
+            error: false,
             products: []
         }
     }
 
-
-    fetchProducts = () => {
-        this.setState({...this.state, isFetching: true});
-
-        fetch(PRODUCT_GRID_API_URL)
-            .then(response => response.json())
-            .then(result => {
-                this.setState({products: result, isFetching: false})
-            })
-            .catch(e => {
-                console.log(e);
-                this.setState({...this.state, isFetching: false});
-            });
+    async componentDidMount() {
+        console.log('component mounting')
+        const products = await getProducts();
+        if (products) {
+            this.setState({error: false, isFetching: false, products: products})
+        } else {
+            this.setState({error: true, isFetching: false, products: products})
+        }
     }
 
-    componentDidMount() {
-        console.log('componentDidMount')
-        this.fetchProducts();
+    mainContent = () => {
+        if (this.state.isFetching) {
+            return <ProductGridFetching/>
+        } else if (this.state.error) {
+            return <ProductGridError/>
+        } else {
+            return <ProductGrid products={this.state.products}/>
+        }
     }
 
     render() {
         return (
             <div><h1>Product grid page</h1>
-                <p>{this.state.products.length} products</p>
+                {this.mainContent()}
             </div>
-
         );
     }
 }
