@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {getProducts} from "../services/getProducts";
-import ProductGridFetching from "../components/ProductGridFetching";
-import ProductGridError from "../components/ProductGridError";
-import ProductGrid from "../components/ProductGrid";
+import ProductGridFetching from "../components/ProductGrid/ProductGridFetching";
+import ProductGridError from "../components/ProductGrid/ProductGridError";
+import ProductGrid from "../components/ProductGrid/ProductGrid";
 
 class ProductGridPage extends Component {
     constructor(props) {
@@ -15,12 +15,11 @@ class ProductGridPage extends Component {
     }
 
     async componentDidMount() {
-        console.log('component mounting')
         const products = await getProducts();
         if (products) {
             this.setState({error: false, isFetching: false, products: products})
         } else {
-            this.setState({error: true, isFetching: false, products: products})
+            this.setState({error: true, isFetching: false, products: null})
         }
     }
 

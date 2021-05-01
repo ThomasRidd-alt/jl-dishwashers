@@ -6,7 +6,15 @@ async function getProducts() {
         );
         const data = await result.json();
 
-        return data.products;
+        const products = data.products.map(item => {
+            return {
+                title: item.title,
+                code: item.code,
+                image: item.image,
+                price: item.price.now
+            }
+        })
+        return products;
     } catch (e) {
         return null;
     }
