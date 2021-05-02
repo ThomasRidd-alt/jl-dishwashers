@@ -1,0 +1,6 @@
+@import '../abstracts/variables';
+@import "../abstracts/mixins";
+
+.visually-hidden {
+  @include uclab-visually-hidden;
+}

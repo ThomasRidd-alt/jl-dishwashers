@@ -11,7 +11,9 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev:sass": "npm run compile:sass --prefix client",
+    "build:sass": "node-sass client/src/styles/main.scss client/public/css/main.css",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run dev:sass\" "
   },
   "author": "Tom Ridd",
   "license": "ISC",
@@ -21,7 +23,7 @@
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "nodemon": "^1.19.3"
   }
 }

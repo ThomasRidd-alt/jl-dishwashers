@@ -15,7 +15,8 @@
     "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "compile:sass": "node-sass src/styles/main.scss public/css/main.css -w"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +40,7 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
     "enzyme": "^3.11.0",
     "jest-cli": "^26.6.3",
+    "node-sass": "^5.0.0",
     "react-dom": "^17.0.2",
     "react-router": "^5.2.0",
     "react-test-renderer": "^17.0.2"
