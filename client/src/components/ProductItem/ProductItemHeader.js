@@ -1,7 +1,7 @@
 const ProductItemHeader = props => {
     return (
-        <header>
-            <h1 className={'dwItem__title'}>{props.title}</h1>
+        <header className={'item-page__header'}>
+            <h1 className={'item-page__heading'}>{props.title}</h1>
         </header>
     )
 };

@@ -8,7 +8,7 @@ async function getProducts() {
         const products = data.products.map(item => {
             return {
                 title: item.title,
-                code: item.code,
+                code: item.productId,
                 image: item.image,
                 price: item.price.now
             }

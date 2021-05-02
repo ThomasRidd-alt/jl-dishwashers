@@ -5,11 +5,11 @@ async function getProductWithId(id) {
         );
         const data = await result.json();
 
-        return data.products;
+        return data;
     } catch (e) {
         return null;
     }
 }
 
 
-export default getProductWithId
+export {getProductWithId}

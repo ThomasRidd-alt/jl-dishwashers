@@ -1,6 +1,10 @@
+import SquareImage from "../SquareImage";
+
 const ProductItemMedia = props => {
     return (
-        <p>Product media</p>
+        <section>
+            <SquareImage alt={props.images.altText} src={props.images.urls[0]}/>
+        </section>
     )
 };
 

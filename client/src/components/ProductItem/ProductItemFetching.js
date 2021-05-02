@@ -4,9 +4,9 @@ import React from "react";
 const ProductItemFetching = () => {
 
     return (<>
-        <ProductItemHeader title={'Loading'}/>
+        <ProductItemHeader title={'Loading product'}/>
         <main>
-            <p>Fetching data</p>
+            <p>Fetching product data</p>
         </main>
     </>)
 }

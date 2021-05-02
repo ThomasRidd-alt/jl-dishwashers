@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductGridHeader renders correctly 1`] = `ShallowWrapper {}`;
+
+exports[`ProductGridHeader renders correctly with data 1`] = `ShallowWrapper {}`;
