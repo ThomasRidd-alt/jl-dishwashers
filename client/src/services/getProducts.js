@@ -1,7 +1,7 @@
 async function getProducts() {
     try {
         const result = await fetch(
-            'http://localhost:3000/api/product-grid'
+            '/api/product-grid'
         );
         const data = await result.json();
 
