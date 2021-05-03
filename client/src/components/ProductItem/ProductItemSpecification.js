@@ -1,7 +1,7 @@
 const ProductItemSpecification = props => {
     const specificationRow = (attribute) => {
         return (
-            <div className={'item-page__specification-row'} key={attribute.name}>
+            <div className={'item-page__specification-row jl-body-text'} key={attribute.name}>
                 <span className={'item-page__specification-row-name'}>{attribute.name}</span>
                 <span className={'item-page__specification-row-value'}>{attribute.value}</span>
             </div>
@@ -9,8 +9,8 @@ const ProductItemSpecification = props => {
     }
 
     return (
-        <section className={'item-page__specification'}>
-            <h2 className={'item-page__heading'}>Product specification</h2>
+        <section className={'dishwasher-section-container item-page__main-column-section'}>
+            <h2 className={'item-page__section-heading jl-heading'}>Product specification</h2>
             {props.specification.map(attribute => specificationRow(attribute))}
         </section>
     )

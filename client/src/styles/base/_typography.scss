@@ -1,3 +1,39 @@
 @import '../abstracts/variables';
 
+@mixin JLFonts {
+  font-family: GillSansforJL, Gill Sans, Gill Sans MT, GillSansMTStd-Medium, Avenir, Corbel, Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  line-height: 1.7;
+}
 
+.jl-heading-large {
+  @include JLFonts;
+  font-size: 3rem;
+  color: $jl-color-text-light;
+}
+
+.jl-heading {
+  @include JLFonts;
+  font-size: $jl-font-size-large;
+  color: $jl-color-text-light;
+}
+
+.jl-body-text-large {
+  @include JLFonts;
+  font-size: $jl-font-size-x-large;
+  font-weight: 400;
+  color: $jl-color-text;
+}
+
+
+.jl-body-text {
+  @include JLFonts;
+  font-size: $jl-font-size;
+  color: $jl-color-text-light;
+}
+
+.jl-highlight-text {
+  @include JLFonts;
+  font-size: $jl-font-size;
+  color: #FF4438;
+}

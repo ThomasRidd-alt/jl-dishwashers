@@ -10,12 +10,14 @@ const ProductItem = props => {
     return (<>
         <ProductItemHeader title={product.title}/>
         <main>
-            <ProductItemMedia images={product.media.images}/>
-            <ProductItemFinance price={product.price.now}
-                                displaySpecialOffer={product.displaySpecialOffer}
-                                includedServices={product.additionalServices.includedServices}/>
-            <ProductItemInformation code={product.code} productInformation={product.details.productInformation}/>
-            <ProductItemSpecification specification={product.details.features[0].attributes}/>
+            <div className={'dishwasher-width-container item-page__container'}>
+                <ProductItemMedia images={product.media.images}/>
+                <ProductItemFinance price={product.price.now}
+                                    displaySpecialOffer={product.displaySpecialOffer}
+                                    includedServices={product.additionalServices.includedServices}/>
+                <ProductItemInformation code={product.code} productInformation={product.details.productInformation}/>
+                <ProductItemSpecification specification={product.details.features[0].attributes}/>
+            </div>
         </main>
     </>)
 }

@@ -6,7 +6,9 @@ const ProductItemError = () => {
     return (<>
         <ProductItemHeader title={'There was an error'}/>
         <main>
-            <p>There was an error finding this product</p>
+            <div className={'dishwasher-width-container'}>
+                <p>There was an error finding this product</p>
+            </div>
         </main>
     </>)
 }

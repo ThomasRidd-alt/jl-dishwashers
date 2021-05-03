@@ -1,21 +1,22 @@
 const ProductItemFinance = props => {
 
+    const getGuaranteeInfo = () => {
+        return <div className={'item-page__finance-guarantee jl-body-text'}>{props.includedServices.map(service => <p
+            key={service}>{service}</p>)}</div>
+    }
+
     const getDisplaySpecialOffer = () => {
         if (props.displaySpecialOffer) {
-            return <p className={'item-page__finance-special-offer'}>Special Offer: {props.displaySpecialOffer}</p>
+            return <p className={'item-page__finance-special-offer jl-highlight-text'}>Special
+                Offer: {props.displaySpecialOffer}</p>
         } else {
             return null
         }
     }
 
-    const getGuaranteeInfo = () => {
-        return <div className={'item-page__finance-guarantee'}>{props.includedServices.map(service => <p
-            key={service}>{service}</p>)}</div>
-    }
-
     return (
-        <section className={'item-page__finance'}>
-            <p className={'item-page__finance-price'}>£{props.price}</p>
+        <section className={'dishwasher-section-container item-page__sidebar-column-section'}>
+            <p className={'item-page__finance-price jl-body-text-large'}>£{props.price}</p>
             {getDisplaySpecialOffer()}
             {getGuaranteeInfo()}
         </section>

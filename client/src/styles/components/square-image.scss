@@ -1,0 +1,7 @@
+.square-image {
+  @include fitted-image;
+
+  &-container {
+    @include fitted-image-container(square);
+  }
+}

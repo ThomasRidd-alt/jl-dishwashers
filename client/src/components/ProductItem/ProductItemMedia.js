@@ -2,8 +2,10 @@ import SquareImage from "../SquareImage";
 
 const ProductItemMedia = props => {
     return (
-        <section>
-            <SquareImage alt={props.images.altText} src={props.images.urls[0]}/>
+        <section className={'dishwasher-section-container item-page__main-column-section'}>
+            <div className={'item-page__images-container'}>
+                <SquareImage alt={props.images.altText} src={props.images.urls[0]}/>
+            </div>
         </section>
     )
 };

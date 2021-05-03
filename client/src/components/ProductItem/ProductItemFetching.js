@@ -6,7 +6,9 @@ const ProductItemFetching = () => {
     return (<>
         <ProductItemHeader title={'Loading product'}/>
         <main>
-            <p>Fetching product data</p>
+            <div className={'dishwasher-width-container'}>
+                <p>Fetching product data</p>
+            </div>
         </main>
     </>)
 }

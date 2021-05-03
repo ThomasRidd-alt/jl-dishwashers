@@ -2,5 +2,5 @@
 @import "../abstracts/mixins";
 
 .visually-hidden {
-  @include uclab-visually-hidden;
+  @include visually-hidden;
 }

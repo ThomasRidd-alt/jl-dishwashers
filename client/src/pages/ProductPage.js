@@ -35,6 +35,7 @@ class ProductPage extends Component {
     }
 
     render() {
+
         return this.getComponentForPageState();
     }
 }

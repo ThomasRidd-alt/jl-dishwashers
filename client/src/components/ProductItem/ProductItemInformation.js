@@ -1,9 +1,9 @@
 const ProductItemInformation = props => {
     return (
-        <section className={'item-page__information'}>
-            <h2 className={'item-page__heading'}>Product information</h2>
-            <p className={'item-page__product-code'}>Product code: {props.code}</p>
-            <div className={'item-page__product-information'}
+        <section className={'dishwasher-section-container item-page__main-column-section'}>
+            <h2 className={'item-page__section-heading jl-heading'}>Product information</h2>
+            <p className={'jl-body-text'}>Product code: {props.code}</p>
+            <div className={'item-page__product-information jl-body-text '}
                  dangerouslySetInnerHTML={{__html: props.productInformation}}/>
         </section>
     )
