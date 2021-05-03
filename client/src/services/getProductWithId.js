@@ -1,7 +1,11 @@
+import {isProduction} from "./helpers";
+
 async function getProductWithId(id) {
+    const url = isProduction() ? `/api/product/${id}` : `http://localhost:3000/api/product/${id}`
+
     try {
         const result = await fetch(
-            `/api/product/${id}`
+            url
         );
         const data = await result.json();
 

@@ -1,7 +1,10 @@
+import {isProduction} from "./helpers";
+
 async function getProducts() {
+    const url = isProduction() ? '/api/product-grid' : 'http://localhost:3000/api/product-grid'
     try {
         const result = await fetch(
-            '/api/product-grid'
+            url
         );
         const data = await result.json();
 
