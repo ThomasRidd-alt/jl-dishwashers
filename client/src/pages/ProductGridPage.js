@@ -23,7 +23,7 @@ class ProductGridPage extends Component {
         }
     }
 
-    mainContent = () => {
+    render = () => {
         if (this.state.isFetching) {
             return <ProductGridFetching/>
         } else if (this.state.error) {
@@ -31,14 +31,6 @@ class ProductGridPage extends Component {
         } else {
             return <ProductGrid products={this.state.products}/>
         }
-    }
-
-    render() {
-        return (
-            <div><h1>Product grid page</h1>
-                {this.mainContent()}
-            </div>
-        );
     }
 }
 

@@ -1,14 +1,20 @@
 const ProductGridHeader = props => {
     if (props.products && props.products.length > 0) {
         return (
-            <header>
-                <h1>Dishwashers ({props.products.length})</h1>
+            <header className={'grid-page__header'}>
+                <div className={'dishwasher-width-container'}>
+                    <h1 className={'grid-page__header-text jl-heading-large'}>Dishwashers
+                        ({props.products.length})</h1>
+                </div>
             </header>
         )
     } else {
         return (
             <header>
-                <h1>Dishwashers</h1>
+                <div className={'grid-page__header dishwasher-width-container'}>
+
+                    <h1 className={'grid-page__header-text jl-heading-large'}>Dishwashers</h1>
+                </div>
             </header>
         );
     }

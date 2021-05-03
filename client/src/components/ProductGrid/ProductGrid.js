@@ -6,7 +6,11 @@ const ProductGrid = props => {
         <>
             <ProductGridHeader products={props.products}/>
             <main>
-                {props.products.map(product => <ProductGridItem key={product.code} product={product}/>)}
+                <div className={'dishwasher-width-container'}>
+                    <div className={'grid-page__container'}>
+                        {props.products.map(product => <ProductGridItem key={product.code} product={product}/>)}
+                    </div>
+                </div>
             </main>
         </>
     );
