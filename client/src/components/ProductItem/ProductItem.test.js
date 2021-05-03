@@ -1,5 +1,5 @@
 import React from "react";
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {mockProductItemData} from "../../data/productData";
 import ProductItem from "./ProductItem";
 
@@ -8,7 +8,7 @@ describe('ProductItem', () => {
         product: mockProductItemData
     }
 
-    let component = mount(<ProductItem {...props}/>);
+    let component = shallow(<ProductItem {...props}/>);
 
     it('renders properly', () => {
         expect(component).toMatchSnapshot()
