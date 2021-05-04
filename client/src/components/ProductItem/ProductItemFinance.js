@@ -16,6 +16,7 @@ const ProductItemFinance = props => {
 
     return (
         <section className={'dishwasher-section-container item-page__sidebar-column-section'}>
+            <h2 className={'visually-hidden'}>Finance</h2>
             <p className={'item-page__finance-price jl-body-text-large'}>£{props.price}</p>
             {getDisplaySpecialOffer()}
             {getGuaranteeInfo()}
