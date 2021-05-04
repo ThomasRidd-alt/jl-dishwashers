@@ -21,4 +21,9 @@ describe('getInfoSummary', () => {
         const example = '</p>an html string<p>'
         expect(getInfoSummary(example)).toEqual('</p>an html string<p>')
     })
+
+    it('is case insensitive to tags', () => {
+        const example = '<P>an html string</P><p>another html string</p>'
+        expect(getInfoSummary(example)).toEqual('an html string')
+    })
 })
