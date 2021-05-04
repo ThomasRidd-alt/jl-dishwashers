@@ -8,8 +8,7 @@ async function getProductWithId(id) {
             url
         );
         const data = await result.json();
-
-        return data;
+        return data.title ? data : null;
     } catch (e) {
         return null;
     }

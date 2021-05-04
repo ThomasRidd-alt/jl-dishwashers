@@ -4,9 +4,6 @@ const ProductGridFetching = props => {
     return (
         <>
             <ProductGridHeader/>
-            <main>
-                <p className={'fetchMessage'}>Fetching products</p>
-            </main>
         </>
     );
 };

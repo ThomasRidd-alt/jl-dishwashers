@@ -29,7 +29,8 @@ class ProductItemInformation extends Component {
                     <div className={'item-page__product-information jl-body-text '}
                          dangerouslySetInnerHTML={{__html: this.productInformation}}/>
                     <div className={`item-page__accordion-button close-button`}
-                         onClick={() => this.setState({isOpen: !this.state.isOpen})}>
+                         onClick={() => this.setState({isOpen: !this.state.isOpen})}
+                         aria-hidden={'true'}>
                         <p className={'item-page__accordion-caption'}>Read less</p>
                         <img className={'chevron'} src={chevronUp} alt={''}/>
                     </div>

@@ -3,9 +3,11 @@ import ProductGridHeader from "./ProductGridHeader";
 const ProductGridError = props => {
     return (
         <>
-            <ProductGridHeader/>
+            <ProductGridHeader error={'There was an error'}/>
             <main>
-                <p className={'errorMessage'}>Error fetching products</p>
+                <div className={'dishwasher-width-container item-page__container'}>
+                    <p className={'jl-body-text'}>Error fetching products</p>
+                </div>
             </main>
         </>
     );
