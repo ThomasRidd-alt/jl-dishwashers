@@ -2,11 +2,9 @@ import {mount, shallow} from "enzyme";
 import React from "react";
 import ProductPage from "./ProductPage";
 import {mockProductItemData} from "../data/productData";
-import {RouterWrapper} from "../testHelpers";
+import {flushPromises, RouterWrapper} from "../testHelpers";
 
 jest.mock("../services/getProductWithId")
-
-const flushPromises = () => new Promise(setImmediate);
 
 const mock_match = {params: {id: 123}}
 

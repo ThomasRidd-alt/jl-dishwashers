@@ -1,9 +1,7 @@
 import {mount, shallow} from "enzyme";
 import React from "react";
 import ProductGridPage from "./ProductGridPage";
-import {RouterWrapper} from "../testHelpers";
-
-const flushPromises = require('flush-promises');
+import {flushPromises, RouterWrapper} from "../testHelpers";
 
 jest.mock("../services/getProducts")
 
