@@ -82,7 +82,10 @@
       justify-content: space-between;
       align-items: center;
       padding: $jl-spacing-s 0;
+      width: 100%;
+      background-color: $color-white;
 
+      border: none;
       border-top: $jl-color-silver 1px solid;
       border-bottom: $jl-color-silver 1px solid;
     }
@@ -92,10 +95,10 @@
       font-size: $jl-font-size-large;
       color: $jl-color-text-light;
     }
+
   }
 
   &__images-container {
     margin: 0 auto;
-
   }
 }

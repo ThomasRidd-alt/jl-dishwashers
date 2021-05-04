@@ -19,21 +19,21 @@ class ProductItemInformation extends Component {
                 <div className={`closed-panel ${this.state.isOpen ? 'visually-hidden' : ''}`} aria-hidden={'true'}>
                     <div className={'item-page__product-summary jl-body-text '}
                          dangerouslySetInnerHTML={{__html: this.infoSummary}}/>
-                    <div className={`item-page__accordion-button open-button`}
-                         onClick={() => this.setState({isOpen: !this.state.isOpen})}>
+                    <button className={`item-page__accordion-button open-button`}
+                            onClick={() => this.setState({isOpen: !this.state.isOpen})}>
                         <p className={'item-page__accordion-caption'}>Read more</p>
                         <img className={'chevron'} src={chevronRight} alt={''}/>
-                    </div>
+                    </button>
                 </div>
                 <div className={`open-panel ${this.state.isOpen ? '' : 'visually-hidden'}`}>
                     <div className={'item-page__product-information jl-body-text '}
                          dangerouslySetInnerHTML={{__html: this.productInformation}}/>
-                    <div className={`item-page__accordion-button close-button`}
-                         onClick={() => this.setState({isOpen: !this.state.isOpen})}
-                         aria-hidden={'true'}>
+                    <button className={`item-page__accordion-button close-button`}
+                            onClick={() => this.setState({isOpen: !this.state.isOpen})}
+                            aria-hidden={'true'}>
                         <p className={'item-page__accordion-caption'}>Read less</p>
                         <img className={'chevron'} src={chevronUp} alt={''}/>
-                    </div>
+                    </button>
                 </div>
             </div>
         )

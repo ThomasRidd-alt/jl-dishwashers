@@ -1,6 +1,10 @@
+import ProductItemHeader from "../components/ProductItem/ProductItemHeader";
+
 const NotFoundPage = props => {
     return (
-        <div>Error: Page not found</div>
+        <>
+            <ProductItemHeader title={'Page not found!'}/>
+        </>
     );
 };
 
